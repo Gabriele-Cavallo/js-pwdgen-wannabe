@@ -6,8 +6,11 @@ const userName = prompt('Ciao, dimmi il tuo nome!');
 const userSurname = prompt('Ciao, dimmi il tuo cognome!');
 // 3-Chiedere all'utente il suo colore preferito
 const userColor = prompt('Ciao, dimmi il tuo colore preferito!');
-// 4-Generare la password in base ai dati inseriti
-const userPswd = `${userName}${userSurname}${userColor}23`;
-// 5-Stampa a schermo la password
+// 4-Chiedere all'utente un numero
+const userNumber = prompt('Ciao, dimmi un numero!');
+let userNumberAsValue = parseInt (userNumber);
+// 5-Generare la password in base ai dati inseriti
+const userPswd = `${userName}${userSurname}${userColor}${userNumberAsValue + 23}`;
+// 6-Stampa a schermo la password
 const userMessage = `${'Ecco la tua password personalizzata!! Password: '}${userPswd}`;
 document.getElementById('pswdGen').innerHTML = userMessage;
